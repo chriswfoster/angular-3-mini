@@ -31,3 +31,18 @@ angular.module('fourWheels').service('carsSrvc', function( $http ) {
     }
   };
 });
+
+// FACTORY BELOW ::::::
+// factory is object constructor, accessed via keyword.
+angular.module('app').factory('todoSrvc', function(){
+  return {
+    todos: ['Make todolist', 'edit a todolist'],
+    addTodo(todo){
+      this.todos.push(todo)
+    },
+    edit(index, todo){
+      this.todos.push(index) = todo
+    }
+
+  }
+})
